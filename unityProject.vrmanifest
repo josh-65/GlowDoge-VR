@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.glowstickdogeballvr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Computers\\Josh's PC\\Unity\\Glowstick Dogeball VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Glowstick Dogeball VR [Testing]"
+        }
+      }
+    }
+  ]
+}
