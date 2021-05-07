@@ -39,11 +39,11 @@
      <Compile Include="Assets\_Scripts\levelChange.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplay.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardData.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\networkManagerAdd.cs" />
+     <Compile Include="Assets\_Scripts\VRMove.cs" />
      <Compile Include="Assets\_Scripts\Save Manager\SaveExtraTypes.cs" />
      <Compile Include="Assets\_Scripts\Mirror\serverStats.cs" />
-     <Compile Include="Assets\_Scripts\Mirror\networkManagerAdd.cs" />
      <Compile Include="Assets\_Scripts\Save Manager\SaveManager.cs" />
-     <Compile Include="Assets\_Scripts\VRMove.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
      <Compile Include="Assets\_Scripts\settings.cs" />
      <Compile Include="Assets\_Scripts\Save Manager\SaveData.cs" />
@@ -299,32 +299,32 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>G:/Unity Editors/2020.3.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.CecilX.Rocks">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Pdb">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NSubstitute">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.CecilX">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.CecilX.Rocks">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Mdb">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.CecilX.Pdb">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Core">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>G:/Unity Editors/2020.3.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -683,6 +683,9 @@
     <Reference Include="Unity.XR.Management.Editor">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RemoteConfig.Editor">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.RemoteConfig.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
@@ -713,6 +716,9 @@
     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RemoteConfig.Core">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.RemoteConfig.Core.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
@@ -722,17 +728,11 @@
     <Reference Include="UnityEditor.SpatialTracking">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.SysrootPackage.Editor">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RemoteConfig.Editor">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.RemoteConfig.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RemoteConfig.Core">
-        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.RemoteConfig.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RemoteConfig">
         <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.RemoteConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+        <HintPath>D:/Joshs PC/Unity/GlowDoge VR/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -740,53 +740,41 @@
       <Project>{34344c26-860c-1d64-959d-31443488881f}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{bee52e7f-6ee8-d306-24ff-0b8baa60f0bc}</Project>
-      <Name>SteamVR_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{fe92d55e-a81f-a1fd-9db3-e718f560fcb9}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{5c3dafd7-9d0a-c274-a804-5a9f300c1c5b}</Project>
-      <Name>SteamVR_Windows_EditorHelper</Name>
+    <ProjectReference Include="Mirror.csproj">
+      <Project>{aa361fcb-cf6b-0209-b29b-78ab29b10573}</Project>
+      <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
       <Project>{186a21c4-b9cc-bc0e-85ac-4ef85afe2793}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Weaver.csproj">
-      <Project>{6a9d0de6-da1d-6e67-7092-85600020422f}</Project>
-      <Name>Mirror.Weaver</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{08732ca6-dc38-74a0-ab17-f434ff719075}</Project>
-      <Name>Mirror.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{92d3dc14-fd5c-35ec-f2cc-096375bd779d}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Cloud.csproj">
-      <Project>{6f619926-a96a-fabc-572b-a284e01d3112}</Project>
-      <Name>Mirror.Cloud</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
-      <Project>{2b09644a-ac5e-8519-b8bb-b5140122b414}</Project>
-      <Name>Mirror.Examples.Cloud.GUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{796f9a2c-0fb1-047e-432f-28cd2320d08c}</Project>
-      <Name>Mirror.Components</Name>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{fe92d55e-a81f-a1fd-9db3-e718f560fcb9}</Project>
+      <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Examples.csproj">
       <Project>{2d66d1f9-6219-ef68-e972-f59d09974394}</Project>
       <Name>Mirror.Examples</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
-      <Project>{e7eaf2d8-3fc7-a15a-c22a-615fdc2223b1}</Project>
-      <Name>Mirror.Examples.Cloud.Pong</Name>
+    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
+      <Project>{5c3dafd7-9d0a-c274-a804-5a9f300c1c5b}</Project>
+      <Name>SteamVR_Windows_EditorHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Cloud.csproj">
+      <Project>{6f619926-a96a-fabc-572b-a284e01d3112}</Project>
+      <Name>Mirror.Cloud</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Weaver.csproj">
+      <Project>{6a9d0de6-da1d-6e67-7092-85600020422f}</Project>
+      <Name>Mirror.Weaver</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Editor.csproj">
+      <Project>{bee52e7f-6ee8-d306-24ff-0b8baa60f0bc}</Project>
+      <Name>SteamVR_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Editor.csproj">
+      <Project>{08732ca6-dc38-74a0-ab17-f434ff719075}</Project>
+      <Name>Mirror.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="WeaverTestExtraAssembly.csproj">
       <Project>{346059c6-70a8-4451-bf95-b4857374890b}</Project>
@@ -800,13 +788,29 @@
       <Project>{6ec0d4c2-1ef0-79c9-b691-512bcf60c6c9}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{aa361fcb-cf6b-0209-b29b-78ab29b10573}</Project>
-      <Name>Mirror</Name>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{92d3dc14-fd5c-35ec-f2cc-096375bd779d}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
+      <Project>{2b09644a-ac5e-8519-b8bb-b5140122b414}</Project>
+      <Name>Mirror.Examples.Cloud.GUI</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{c786779c-b9a5-368b-2d79-c73561fdf817}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{796f9a2c-0fb1-047e-432f-28cd2320d08c}</Project>
+      <Name>Mirror.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
+      <Project>{e7eaf2d8-3fc7-a15a-c22a-615fdc2223b1}</Project>
+      <Name>Mirror.Examples.Cloud.Pong</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{d442a7c5-619a-cf41-2232-ff4a435ebdd0}</Project>
+      <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
